@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://mohaned-yasmine.vercel.app/background-collage-large.jpeg',
+        url: 'https://mohaned-yasmine.vercel.app/background-collage.jpeg',
       },
     ],
     title: "Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف",
