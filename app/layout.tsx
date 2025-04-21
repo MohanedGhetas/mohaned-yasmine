@@ -1,3 +1,4 @@
+// layout.tsx (Server-side component)
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -6,24 +7,25 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// Server-side context (no 'use client' directive here)
 export const metadata: Metadata = {
   title: "Mohaned & Yasmine | Wedding Invitation",
   description: "Join us to celebrate the wedding of Mohaned & Yasmine",
   openGraph: {
-    url: 'https://mohaned-yasmine.vercel.app/', // URL of the page
-    type: 'website', // Type of content (can also be 'article' if it's a blog post)
+    url: 'https://mohaned-yasmine.vercel.app/',
+    type: 'website',
     images: [
       {
-        url: 'https://mohaned-yasmine.vercel.app/background-collage-large.jpeg', // Ensure the image is accessible and large enough
-        width: 1800,  // Larger width for better display
-        height: 960,  // Larger height to maintain aspect ratio
-        alt: 'Mohaned & Yasmine Wedding Invitation | دعوة زفاف محند وياسمين', // Include both languages in the alt text
+        url: 'https://mohaned-yasmine.vercel.app/background-collage-large.jpeg',
+        width: 1800,
+        height: 960,
+        alt: 'Mohaned & Yasmine Wedding Invitation | دعوة زفاف محند وياسمين',
         type: 'image/jpeg',
       },
     ],
-    title: "Mohaned & Yasmine | Wedding Invitation", // English title
-    description: "Join us to celebrate the wedding of Mohaned & Yasmine", // English description
-    siteName: "Mohaned & Yasmine | موحد وياسمين", // Mixed site name
+    title: "Mohaned & Yasmine | Wedding Invitation",
+    description: "Join us to celebrate the wedding of Mohaned & Yasmine",
+    siteName: "Mohaned & Yasmine | موحد وياسمين",
   },
 }
 
@@ -42,6 +44,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="audio" type="audio/mpeg" />
+        
+        <link rel="icon" href="https://mohaned-yasmine.vercel.app/small-icon.png" type="image/x-icon" />
+
         <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage-large.jpeg" />
         <meta property="og:image:width" content="1800" />
         <meta property="og:image:height" content="960" />
@@ -49,9 +54,9 @@ export default function RootLayout({
         <meta property="og:title" content="Mohaned & Yasmine | Wedding Invitation" />
         <meta property="og:description" content="Join us to celebrate the wedding of Mohaned & Yasmine" />
         <meta property="og:site_name" content="Mohaned & Yasmine | موحد وياسمين" />
-        <meta property="og:url" content="https://mohaned-yasmine.vercel.app/" /> {/* Add og:url */}
-        <meta property="og:type" content="website" /> {/* Add og:type */}
-        <meta property="fb:app_id" content="YOUR_APP_ID" /> {/* Add fb:app_id, replace with your actual Facebook App ID */}
+        <meta property="og:url" content="https://mohaned-yasmine.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="fb:app_id" content="YOUR_APP_ID" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -61,3 +66,9 @@ export default function RootLayout({
     </html>
   )
 }
+
+// Keep the dynamic directive for server-side rendering
+export const dynamic = "force-dynamic"
+export const revalidate = 0 // Disable static generation for this page
+export const fetchCache = "force-no-store" // Disable caching for this page
+export const runtime = "edge" // Use edge runtime for better performance

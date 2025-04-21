@@ -13,11 +13,19 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [language, setLanguage] = useState<"en" | "ar">("en")
 
-  // Set a shorter loading time
+  // Set language based on the user's device language (on initial load)
   useEffect(() => {
+    const userLanguage = navigator.language || navigator.languages[0] // e.g., 'en-US', 'ar-EG'
+    
+    if (userLanguage.includes("ar")) {
+      setLanguage("ar")  // Set to Arabic if the language is Arabic
+    } else {
+      setLanguage("en")  // Otherwise, set to English
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 4000) // Reduced from previous longer time
+    }, 4000) // Reduced loading time for demo
 
     return () => clearTimeout(timer)
   }, [])
