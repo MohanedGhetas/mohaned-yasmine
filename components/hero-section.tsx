@@ -64,7 +64,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
           <div className="flex items-center gap-2 text-xl">
             <MapPin className="text-primary" />
             <span className={language === "ar" ? "arabic" : ""}>
-              {language === "en" ? "Grand Ballroom, Cairo" : "القاعة الكبرى، القاهرة"}
+              {language === "en" ? "El-Mosheer Tantawy Mosque" : "مسجد المشير طنطاوي"}
             </span>
           </div>
         </motion.div>
@@ -91,7 +91,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
             <Button
               variant="outline"
               className="bg-background border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-6 py-6 h-auto"
-              onClick={() => window.open("https://maps.app.goo.gl/venue", "_blank")}
+              onClick={() => window.open("https://maps.app.goo.gl/ZDxsFueaotgYBx4m9", "_blank")}
             >
               {language === "en" ? "View Map Location" : "عرض الموقع على الخريطة"}
             </Button>
