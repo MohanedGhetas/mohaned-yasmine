@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: '/public/background-collage.jpeg',
+        url: 'https://mohaned-yasmine.vercel.app/background-collage.jpeg',
         width: 1200,
         height: 630,
         alt: 'Mohaned & Yasmine Wedding Invitation',
@@ -35,8 +35,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="preload" href="/audio/compressed_audio.mp3" as="audio" type="audio/mpeg" />
-        <meta property="og:image" content="/public/background-collage.jpeg" />
+        <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="audio" type="audio/mpeg" />
+        <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage.jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Mohaned & Yasmine Wedding Invitation" />
