@@ -16,10 +16,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://mohaned-yasmine.vercel.app/background-collage-large.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين',
-        type: 'image/jpeg',
       },
     ],
     title: "Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف",
@@ -43,10 +39,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="media" type="audio/mpeg" />
-        <link rel="icon" href="https://mohaned-yasmine.vercel.app/small-icon.png" type="image/x-icon" />
+        <link rel="icon" type="image/svg+xml" href="/heart.svg" />
         <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage-large.jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين" />
         <meta property="og:title" content="Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف" />
         <meta property="og:description" content="Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين" />
@@ -54,6 +48,11 @@ export default function RootLayout({
         <meta property="og:url" content="https://mohaned-yasmine.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="fb:app_id" content="YOUR_APP_ID" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف" />
+        <meta property="twitter:description" content="Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين" />
+        <meta property="twitter:image" content="https://mohaned-yasmine.vercel.app/background-collage-large.jpeg" />
+        <meta property="twitter:image:alt" content="Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
