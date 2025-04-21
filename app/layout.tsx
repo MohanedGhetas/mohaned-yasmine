@@ -16,8 +16,12 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Mohaned & Yasmine Wedding Invitation',
+        type: 'image/jpeg', // Ensure the image type is specified
       },
     ],
+    title: "Mohaned & Yasmine | Wedding Invitation", // Ensure title is included
+    description: "Join us to celebrate the wedding of Mohaned & Yasmine", // Ensure description is included
+    siteName: "Mohaned & Yasmine", // Optional: Name of the site for better context
   },
 }
 
@@ -40,6 +44,9 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Mohaned & Yasmine Wedding Invitation" />
+        <meta property="og:title" content="Mohaned & Yasmine | Wedding Invitation" />
+        <meta property="og:description" content="Join us to celebrate the wedding of Mohaned & Yasmine" />
+        <meta property="og:site_name" content="Mohaned & Yasmine" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
