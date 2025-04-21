@@ -26,6 +26,16 @@ export default function HeroSection({ language }: HeroSectionProps) {
       className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative"
     >
       <div className="max-w-4xl w-full text-center">
+      <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={heroInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-10"
+        >
+          <h3 className={cn("text-2xl mb-2", language === "ar" ? "arabic" : "english-title")}>
+            {language === "en" ? "Together with their families" : "مع عائلاتهم"}
+          </h3>
+        </motion.div>
         <motion.h1
           initial={{ y: -50, opacity: 0 }}
           animate={heroInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
@@ -41,11 +51,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-10"
         >
-          <p className={cn("text-xl md:text-2xl mb-2", language === "ar" ? "arabic" : "english-body")}>
+          <p className={cn("text-xl md:text-2xl mb-2", language === "ar" ? "arabic" : "english-title")}>
             {language === "en" ? "Request the pleasure of your company" : "يتشرفان بدعوتكم لحضور حفل زفافهما"}
-          </p>
-          <p className={cn("text-xl md:text-2xl", language === "ar" ? "arabic" : "english-body")}>
-            {language === "en" ? "to celebrate their wedding" : "للاحتفال بزفافهما"}
           </p>
         </motion.div>
 
@@ -61,12 +68,17 @@ export default function HeroSection({ language }: HeroSectionProps) {
               {language === "en" ? "May 23, 2025" : "٢٣ مايو ٢٠٢٥"}
             </span>
           </div>
-          <div className="flex items-center gap-2 text-xl">
+          <motion.a
+            href="https://goo.gl/maps/8QJ6MqkNpNnSsJjy6"
+            className="flex items-center gap-2 text-xl transition-colors"
+            whileHover={{ scale: 1.05, color: "#d97706" }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <MapPin className="text-primary" />
             <span className={language === "ar" ? "arabic" : ""}>
               {language === "en" ? "El-Mosheer Tantawy Mosque" : "مسجد المشير طنطاوي"}
             </span>
-          </div>
+          </motion.a>
         </motion.div>
 
         {/* Countdown Timer */}
