@@ -7,23 +7,25 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mohaned & Yasmine | Wedding Invitation",
-  description: "Join us to celebrate the wedding of Mohaned & Yasmine",
+  title: "Mohaned & Yasmine | Wedding Invitation | دعوة زفاف مهند وياسمين",
+  description: "Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين",
   openGraph: {
     images: [
       {
-        url: 'https://mohaned-yasmine.vercel.app/background-collage.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Mohaned & Yasmine Wedding Invitation',
-        type: 'image/jpeg', // Ensure the image type is specified
+        url: 'https://mohaned-yasmine.vercel.app/background-collage-large.jpeg', // Use a larger image URL
+        width: 1800,  // Larger width
+        height: 960,  // Larger height to maintain aspect ratio
+        alt: 'Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين',
+        type: 'image/jpeg',
       },
     ],
-    title: "Mohaned & Yasmine | Wedding Invitation", // Ensure title is included
-    description: "Join us to celebrate the wedding of Mohaned & Yasmine", // Ensure description is included
-    siteName: "Mohaned & Yasmine", // Optional: Name of the site for better context
+    title: "Mohaned & Yasmine | Wedding Invitation | دعوة زفاف مهند وياسمين",
+    description: "Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين",
+    siteName: "Mohaned & Yasmine | مهند وياسمين",
   },
 }
+
+
 
 export default function RootLayout({
   children,
