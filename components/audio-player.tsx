@@ -83,9 +83,9 @@ export default function AudioPlayer() {
             {error ? (
               <AlertCircle size={24} color="white" />
             ) : isPlaying ? (
-              <VolumeX size={24} color="white" />
-            ) : (
               <Volume2 size={24} color="white" />
+            ) : (
+              <VolumeX size={24} color="white" />
             )}
 
             {/* Use direct HTML5 audio element with multiple sources */}

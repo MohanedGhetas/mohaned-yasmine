@@ -32,13 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="media" type="audio/mpeg" />
+        {/* <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="media" type="audio/mpeg" /> */}
         <link rel="icon" type="image/svg+xml" href="/heart.svg" />
         <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage.jpeg" />
         <meta property="og:image:alt" content="Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين" />

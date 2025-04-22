@@ -37,7 +37,9 @@ export default function EnvelopeLoading({ language, onComplete }: EnvelopeLoadin
       <div className="envelope-container">
         <div className={`envelope ${envelopeOpen ? "open" : ""}`}>
           <div className="envelope-front">
-            <div className="envelope-initials">M & Y</div>
+            <div className="envelope-initials">
+            {language === "en" ? "M & Y" : "م و ي"}
+              </div>
           </div>
           <div className="envelope-back">
             <div className={`envelope-letter ${letterVisible ? "visible" : ""}`}>
