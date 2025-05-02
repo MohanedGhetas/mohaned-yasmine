@@ -41,6 +41,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@keyframes expandPaper {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-expandPaper {
+  animation: expandPaper 1.3s ease-out forwards;
+}
 
 @layer base {
   * {
@@ -153,18 +167,33 @@
   width: 58px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
 }
-.path { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 3s linear forwards; animation-iteration-count: 2;animation-delay: 1s;}
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear forwards;
+  animation-iteration-count: 1;
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
-#arrow{animation: arrow 3s linear forwards; opacity:0;}
+
+#arrow {
+  animation: arrow 3s linear forwards;
+  opacity: 0;
+}
+
 @keyframes arrow {
-  to {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
+
 /* Timeline styles */
 .timeline {
   position: relative;
