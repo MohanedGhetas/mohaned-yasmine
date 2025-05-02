@@ -69,7 +69,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
             </span>
           </div>
           <motion.a
-            href="https://goo.gl/maps/8QJ6MqkNpNnSsJjy6"
+            href="https://maps.app.goo.gl/ZDxsFueaotgYBx4m9"
+            target="_blank"
             className="flex items-center gap-2 text-xl transition-colors"
             whileHover={{ scale: 1.05, color: "#d97706" }}
             transition={{ type: "spring", stiffness: 300 }}
