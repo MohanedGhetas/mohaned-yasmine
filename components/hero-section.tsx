@@ -32,8 +32,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mb-10"
         >
-          <h3 className={cn("text-2xl mb-2", language === "ar" ? "arabic" : "english-title")}>
-            {language === "en" ? "Together with their families" : "مع عائلاتهم"}
+          <h3 className={"text-3xl mb-3 text-primary"}>
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
           </h3>
         </motion.div>
         <motion.h1
@@ -65,9 +65,11 @@ export default function HeroSection({ language }: HeroSectionProps) {
           <div className="flex items-center gap-2 text-xl">
             <Calendar className="text-primary" />
             <span className={language === "ar" ? "arabic" : ""}>
-              {language === "en" ? "May 23, 2025" : "٢٣ مايو ٢٠٢٥"}
+            {language === "en"
+                ? "May 23, 2025 • 6 o'clock in the evening"
+                : "٢٣ مايو ٢٠٢٥ • الساعة السادسة مساءً"}
             </span>
-          </div>
+          </div>  
           <motion.a
             href="https://maps.app.goo.gl/ZDxsFueaotgYBx4m9"
             target="_blank"
@@ -77,7 +79,7 @@ export default function HeroSection({ language }: HeroSectionProps) {
           >
             <MapPin className="text-primary" />
             <span className={language === "ar" ? "arabic" : ""}>
-              {language === "en" ? "El-Mosheer Tantawy Mosque" : "مسجد المشير طنطاوي"}
+              {language === "en" ? "El-Mosheer Tantawy Mosque • Safa Hall" : "قاعة الصفا • مسجد المشير طنطاوي"}
             </span>
           </motion.a>
         </motion.div>
