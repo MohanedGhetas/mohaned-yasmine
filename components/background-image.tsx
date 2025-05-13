@@ -23,7 +23,7 @@ export default function BackgroundImage() {
       {/* Background image */}
       <div className="fixed inset-0 -z-20">
         <Image
-          src="/background-collage.jpeg"
+          src="/background-collage.webp"
           alt="Background"
           fill
           priority

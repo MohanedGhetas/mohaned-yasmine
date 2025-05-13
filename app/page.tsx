@@ -8,10 +8,12 @@ import TimelineSection from "@/components/timeline-section"
 import EnhancedFooter from "@/components/enhanced-footer"
 import BackgroundImage from "@/components/background-image"
 import AudioPlayer from "@/components/audio-player"
+import Upload from "@/components/upload"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [language, setLanguage] = useState<"en" | "ar">("en")
+  const [fromQR, setFromQR] = useState(false)
 
   useEffect(() => {
     const userLanguage = navigator.language || navigator.languages[0]
@@ -19,6 +21,11 @@ export default function Home() {
       setLanguage("ar")
     } else {
       setLanguage("en")
+    }
+
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.get("from") === "qr") {
+      setFromQR(true)
     }
   }, [])
 
@@ -29,12 +36,16 @@ export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden">
       {isLoading ? (
-        <EnvelopeLoading language={language} onComplete={() => setIsLoading(false)} />
+        fromQR ? (
+          <Upload language={language} onComplete={() => setIsLoading(false)} />
+        ) : (
+          <EnvelopeLoading language={language} onComplete={() => setIsLoading(false)} />
+        )
       ) : (
         <>
-        <BackgroundImage />
+          <BackgroundImage />
           <div className="floating-hearts"></div>
-  
+
           <button
             onClick={toggleLanguage}
             className="fixed top-4 right-4 z-50 bg-primary text-primary-foreground rounded-full p-2 shadow-md hover:bg-secondary transition-colors"
@@ -49,6 +60,4 @@ export default function Home() {
       )}
     </main>
   )
-  
 }
-

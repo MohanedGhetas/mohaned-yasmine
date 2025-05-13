@@ -68,7 +68,7 @@ export default function TimelineItem({
                 <div className="timeline-image-container">
                   <div className="relative w-full aspect-[3/4] rounded-md overflow-hidden">
                     <Image
-                      src={image || "/placeholder.svg"}
+                      src={image}
                       alt={title}
                       fill
                       className="object-contain bg-black/10"

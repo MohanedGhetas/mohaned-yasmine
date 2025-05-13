@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://mohaned-yasmine.vercel.app/background-collage.jpeg',
+        url: 'https://mohaned-yasmine.vercel.app/background-collage.webp',
       },
     ],
     title: "Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف",
@@ -33,8 +33,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* <link rel="preload" href="https://mohaned-yasmine.vercel.app/audio/compressed_audio.mp3" as="media" type="audio/mpeg" /> */}
-        <link rel="icon" type="image/svg+xml" href="/heart.svg" />
-        <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage.jpeg" />
+        <link rel="icon" type="image/svg+xml" href="/logo.png" />
+        <meta property="og:image" content="https://mohaned-yasmine.vercel.app/background-collage.webp" />
         <meta property="og:image:alt" content="Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين" />
         <meta property="og:title" content="Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف" />
         <meta property="og:description" content="Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين" />
@@ -45,7 +45,7 @@ export default function RootLayout({
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Mohaned & Yasmine | مهند وياسمين | Wedding Invitation | دعوة زفاف" />
         <meta property="twitter:description" content="Join us to celebrate the wedding of Mohaned & Yasmine | انضموا إلينا للاحتفال بزفاف مهند وياسمين" />
-        <meta property="twitter:image" content="https://mohaned-yasmine.vercel.app/background-collage.jpeg" />
+        <meta property="twitter:image" content="https://mohaned-yasmine.vercel.app/background-collage.webp" />
         <meta property="twitter:image:alt" content="Mohaned & Yasmine Wedding Invitation | دعوة زفاف مهند وياسمين" />
       </head>
       <body className={inter.className}>
